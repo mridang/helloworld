@@ -17,5 +17,6 @@ jobs:
       run: mvn package --file pom.xml
     - name: ESLint checks
       uses: mridang/action-intellij@master
-      env:
+      with:
+        credentials: ${{ secrets.GITHUB_TOKEN }}
         myToken: ${{ secrets.GITHUB_TOKEN }}
